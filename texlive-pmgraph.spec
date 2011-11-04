@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/pmgraph
+# catalog-date 2008-11-04 08:05:43 +0100
+# catalog-license gpl
+# catalog-version 1.0
 Name:		texlive-pmgraph
 Version:	1.0
 Release:	1
@@ -40,6 +46,7 @@ wider range of vectors, and a lot more box frame styles.
 %doc %{_texmfdistdir}/doc/latex/pmgraph/README
 %doc %{_texmfdistdir}/doc/latex/pmgraph/pmgraph.pdf
 %doc %{_texmfdistdir}/doc/latex/pmgraph/pmgraph.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -50,3 +57,5 @@ wider range of vectors, and a lot more box frame styles.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
